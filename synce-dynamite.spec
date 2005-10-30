@@ -15,7 +15,7 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
-Requires:	%{name}-libs = %{version}
+Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +32,7 @@ comp.compression.
 %package libs
 Summary:	The Dynamite library
 Summary(pl):	Biblioteka Dynamite
-Group:		Development/Libraries
+Group:		Libraries
 
 %description libs
 The dynamite library. It is needed to squeeze out juicy .cab files
@@ -59,7 +59,7 @@ Pliki nag³ówkowe biblioteki Dynamite.
 Summary:	Static Dynamite library
 Summary(pl):	Statyczna biblioteka Dynamite
 Group:		Development/Libraries
-Requires:	%{name}-libs = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description libs-static
 Static Dynamite library.
