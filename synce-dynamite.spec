@@ -59,7 +59,7 @@ Pliki nag³ówkowe biblioteki Dynamite.
 Summary:	Static Dynamite library
 Summary(pl):	Statyczna biblioteka Dynamite
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-libs-devel = %{version}-%{release}
 
 %description libs-static
 Static Dynamite library.
