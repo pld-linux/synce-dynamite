@@ -2,7 +2,7 @@
 %define	_realname	dynamite
 
 Summary:	SynCE Dynamite - a tool to use data compressed with PKWARE DCL
-Summary(pl.UTF-8):   SynCE Dynamite - narzędzie do dekompresji danych spakowanych PKWARE DCL
+Summary(pl.UTF-8):	SynCE Dynamite - narzędzie do dekompresji danych spakowanych PKWARE DCL
 Name:		synce-%{_realname}
 Version:	0.1
 Release:	1
@@ -31,7 +31,7 @@ comp.compression.
 
 %package libs
 Summary:	The Dynamite library
-Summary(pl.UTF-8):   Biblioteka Dynamite
+Summary(pl.UTF-8):	Biblioteka Dynamite
 Group:		Libraries
 
 %description libs
@@ -45,7 +45,7 @@ programów instalacyjnych utworzonych za pomocą programu Setup Factory.
 
 %package libs-devel
 Summary:	Header files for the Dynamite library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki Dynamite
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Dynamite
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -57,7 +57,7 @@ Pliki nagłówkowe biblioteki Dynamite.
 
 %package libs-static
 Summary:	Static Dynamite library
-Summary(pl.UTF-8):   Statyczna biblioteka Dynamite
+Summary(pl.UTF-8):	Statyczna biblioteka Dynamite
 Group:		Development/Libraries
 Requires:	%{name}-libs-devel = %{version}-%{release}
 
