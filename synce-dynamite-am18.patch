@@ -1,0 +1,11 @@
+--- dynamite-0.1/dynamite.m4.orig	2003-08-22 14:31:05.000000000 +0200
++++ dynamite-0.1/dynamite.m4	2007-05-16 23:54:23.253094604 +0200
+@@ -1,7 +1,7 @@
+ dnl $Id$ vim: syntax=config
+ dnl Check for libdynamite
+ 
+-AC_DEFUN(AM_PATH_LIBDYNAMITE, [
++AC_DEFUN([AM_PATH_LIBDYNAMITE], [
+ 
+   AC_ARG_WITH(libdynamite,
+     AC_HELP_STRING(
