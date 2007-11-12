@@ -1,16 +1,14 @@
-
-%define	_realname	dynamite
-
 Summary:	SynCE Dynamite - a tool to use data compressed with PKWARE DCL
 Summary(pl.UTF-8):	SynCE Dynamite - narzędzie do dekompresji danych spakowanych PKWARE DCL
-Name:		synce-%{_realname}
+Name:		synce-dynamite
 Version:	0.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Applications
-Source0:	http://dl.sourceforge.net/synce/%{_realname}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/synce/dynamite-%{version}.tar.gz
 # Source0-md5:	5e99d9172f60b8084cc6f6ba1a8c8261
 Patch0:		%{name}-am18.patch
+Patch1:		%{name}-pc.patch
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
@@ -69,8 +67,9 @@ Static Dynamite library.
 Statyczna biblioteka Dynamite.
 
 %prep
-%setup -q -n %{_realname}-%{version}
+%setup -q -n dynamite-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -79,7 +78,6 @@ Statyczna biblioteka Dynamite.
 %{__autoheader}
 %{__automake}
 %configure
-
 %{__make}
 
 %install
@@ -109,6 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libdynamite.la
 %{_includedir}/libdynamite.h
 %{_aclocaldir}/dynamite.m4
+%{_pkgconfigdir}/libdynamite.pc
 
 %files libs-static
 %defattr(644,root,root,755)
