@@ -1,12 +1,13 @@
+%define		realname	libdynamite
 Summary:	SynCE Dynamite - a tool to use data compressed with PKWARE DCL
 Summary(pl.UTF-8):	SynCE Dynamite - narzędzie do dekompresji danych spakowanych PKWARE DCL
 Name:		synce-dynamite
-Version:	0.1
-Release:	4
+Version:	0.1.1
+Release:	1
 License:	MIT
 Group:		Applications
-Source0:	http://dl.sourceforge.net/synce/dynamite-%{version}.tar.gz
-# Source0-md5:	5e99d9172f60b8084cc6f6ba1a8c8261
+Source0:	http://dl.sourceforge.net/synce/%{realname}-%{version}.tar.gz
+# Source0-md5:	238bf243dba2166a2e0e141b18065235
 Patch0:		%{name}-am18.patch
 Patch1:		%{name}-pc.patch
 URL:		http://www.synce.org/
@@ -67,7 +68,7 @@ Static Dynamite library.
 Statyczna biblioteka Dynamite.
 
 %prep
-%setup -q -n dynamite-%{version}
+%setup -q -n %{realname}-%{version}
 %patch0 -p1
 %patch1 -p1
 
