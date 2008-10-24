@@ -8,8 +8,7 @@ License:	MIT
 Group:		Applications
 Source0:	http://dl.sourceforge.net/synce/%{realname}-%{version}.tar.gz
 # Source0-md5:	238bf243dba2166a2e0e141b18065235
-Patch0:		%{name}-am18.patch
-Patch1:		%{name}-pc.patch
+Patch0:		%{name}-ac.patch
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
@@ -70,7 +69,6 @@ Statyczna biblioteka Dynamite.
 %prep
 %setup -q -n %{realname}-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -96,18 +94,19 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENSE
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/dynamite
+%{_mandir}/man1/dynamite.1*
 
 %files libs
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libdynamite.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdynamite.so.0
 
 %files libs-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libdynamite.so
 %{_libdir}/libdynamite.la
 %{_includedir}/libdynamite.h
-%{_aclocaldir}/dynamite.m4
 %{_pkgconfigdir}/libdynamite.pc
 
 %files libs-static
