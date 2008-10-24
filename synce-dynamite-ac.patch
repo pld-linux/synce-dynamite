@@ -1,0 +1,12 @@
+--- libdynamite-0.1.1/configure.ac.orig	2008-10-24 14:49:03.936265970 +0200
++++ libdynamite-0.1.1/configure.ac	2008-10-24 14:49:27.934616617 +0200
+@@ -27,9 +27,6 @@
+ AC_PROG_MAKE_SET
+ dnl AM_PATH_CHECK()
+ 
+-dnl Checks for libraries.
+-AC_LIB_RPATH
+-
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ 
