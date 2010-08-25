@@ -3,10 +3,10 @@ Summary:	SynCE Dynamite - a tool to use data compressed with PKWARE DCL
 Summary(pl.UTF-8):	SynCE Dynamite - narzędzie do dekompresji danych spakowanych PKWARE DCL
 Name:		synce-dynamite
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications
-Source0:	http://dl.sourceforge.net/synce/%{realname}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/synce/%{realname}-%{version}.tar.gz
 # Source0-md5:	238bf243dba2166a2e0e141b18065235
 Patch0:		%{name}-ac.patch
 URL:		http://www.synce.org/
@@ -15,6 +15,7 @@ BuildRequires:	automake >= 1.4
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
 Requires:	%{name}-libs = %{version}-%{release}
+Obsoletes:	dynamite
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,6 +33,7 @@ comp.compression.
 Summary:	The Dynamite library
 Summary(pl.UTF-8):	Biblioteka Dynamite
 Group:		Libraries
+Obsoletes:	dynamite-libs
 
 %description libs
 The dynamite library. It is needed to squeeze out juicy .cab files
@@ -47,6 +49,7 @@ Summary:	Header files for the Dynamite library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Dynamite
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
+Obsoletes:	dynamite-devel
 
 %description libs-devel
 Header files for the Dynamite library.
@@ -59,6 +62,7 @@ Summary:	Static Dynamite library
 Summary(pl.UTF-8):	Statyczna biblioteka Dynamite
 Group:		Development/Libraries
 Requires:	%{name}-libs-devel = %{version}-%{release}
+Obsoletes:	dynamite-static
 
 %description libs-static
 Static Dynamite library.
