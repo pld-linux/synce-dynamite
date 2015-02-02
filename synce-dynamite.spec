@@ -5,7 +5,7 @@ Name:		synce-dynamite
 Version:	0.1.1
 Release:	2
 License:	MIT
-Group:		Applications
+Group:		Applications/File
 Source0:	http://downloads.sourceforge.net/synce/%{realname}-%{version}.tar.gz
 # Source0-md5:	238bf243dba2166a2e0e141b18065235
 Patch0:		%{name}-ac.patch
@@ -26,7 +26,7 @@ by a post in the comp.compression newsgroup.
 %description -l pl.UTF-8
 Dynamite jest narzędziem służącym do dekompresji danych spakowanych za
 pomocą PKWARE Data Compression Library. Zostało stworzone zgodnie ze
-specyfikacją zamieszczoną wiadomości wysłanej na grupę dyskusyjną
+specyfikacją zamieszczoną w wiadomości wysłanej na grupę dyskusyjną
 comp.compression.
 
 %package libs
@@ -41,8 +41,8 @@ from self-extracting installation programs created by the Setup
 Factory installation program.
 
 %description libs -l pl.UTF-8
-Biblioteka Dynamite. Jest ona potrzebna do wydobycia plików .cab z
-programów instalacyjnych utworzonych za pomocą programu Setup Factory.
+Biblioteka Dynamite, służąca do wydobywania plików .cab z programów
+instalacyjnych utworzonych za pomocą programu Setup Factory.
 
 %package libs-devel
 Summary:	Header files for the Dynamite library
