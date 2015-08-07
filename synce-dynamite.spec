@@ -3,7 +3,7 @@ Summary:	SynCE Dynamite - a tool to use data compressed with PKWARE DCL
 Summary(pl.UTF-8):	SynCE Dynamite - narzędzie do dekompresji danych spakowanych PKWARE DCL
 Name:		synce-dynamite
 Version:	0.1.1
-Release:	2
+Release:	3
 License:	MIT
 Group:		Applications/File
 Source0:	http://downloads.sourceforge.net/synce/%{realname}-%{version}.tar.gz
